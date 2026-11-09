@@ -1,0 +1,178 @@
+/* RESET DASAR */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: #20252b;
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+.topbar {
+  min-height: 76px;
+  padding: 13px 3.2%;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  border-bottom: 1px solid #e8e8e8;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.brand {
+  color: #333;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 700;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.brand-icon {
+  width: 29px; height: 29px; border-radius: 50%;
+  display: grid; place-items: center;
+  color: white; background: #18a9d1;
+  font-size: 18px;
+}
+.brand-light { font-weight: 400; color: #159dc3; }
+.main-nav { display: flex; gap: 23px; white-space: nowrap; }
+.main-nav a, .login {
+  color: #222; text-decoration: none; font-size: 11px; font-weight: bold;
+}
+.search {
+  height: 39px; flex: 1; max-width: 620px;
+  display: flex; align-items: center; gap: 10px;
+  border: 1px solid #d5d5d5; border-radius: 7px; padding: 0 11px;
+  color: #89939d;
+}
+.search input { border: 0; outline: 0; width: 100%; font-size: 14px; }
+.search button {
+  border: 0; background: transparent; color: #168db5; cursor: pointer;
+}
+.login { margin-left: auto; color: #129cc7; }
+.signup {
+  padding: 11px 17px; border-radius: 5px; color: white;
+  background: #16a8d2; text-decoration: none; font-size: 11px; font-weight: bold;
+  white-space: nowrap;
+}
+
+/* SUSUNAN UTAMA */
+.page-layout {
+  width: min(1440px, 100%);
+  margin: 0 auto;
+  padding: 38px 2.2% 55px;
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(285px, 1fr);
+  gap: 30px;
+  align-items: start;
+}
+.main-column { min-width: 0; }
+.viewer {
+  width: 100%; height: clamp(390px, 49vw, 570px);
+  background: #dedede; position: relative; overflow: hidden;
+}
+.viewer iframe { width: 100%; height: 100%; border: 0; display: block; }
+.viewer-caption {
+  position: absolute; left: 15px; right: 15px; bottom: 12px;
+  display: flex; justify-content: space-between; pointer-events: none;
+  color: #fff; text-shadow: 0 1px 3px #333; font-size: 10px; letter-spacing: .5px;
+}
+.model-heading {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  gap: 15px; padding: 19px 0 10px;
+}
+.model-heading h1 { margin: 0 0 5px; font-size: 24px; font-weight: 500; }
+.model-heading p { margin: 0; color: #858585; font-size: 13px; }
+.model-tag { color: #888; font-size: 12px; white-space: nowrap; }
+
+/* MATERI ORGAN */
+.lesson { margin-top: 30px; }
+.lesson h2 { font-size: 21px; font-weight: 600; margin: 0 0 10px; }
+.lesson > p { color: #626b73; line-height: 1.7; font-size: 14px; max-width: 850px; }
+.organ-grid {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px; margin: 20px 0;
+}
+.organ-card {
+  text-align: left; padding: 15px; border: 1px solid #e5e8eb;
+  border-radius: 7px; background: #fff; cursor: pointer; color: #303840;
+  display: flex; flex-direction: column; gap: 5px; transition: .2s;
+}
+.organ-card:hover, .organ-card.active {
+  border-color: #18a6cd; background: #f1fbfe;
+}
+.organ-number { color: #159fc5; font-size: 11px; font-weight: bold; }
+.organ-card strong { font-size: 14px; }
+.organ-card small { color: #89929a; font-size: 11px; }
+.info-panel {
+  padding: 20px; border-left: 4px solid #19a6ce;
+  background: #f5f8fa; border-radius: 4px;
+}
+.info-label { font-size: 10px; color: #168eaf; letter-spacing: 1px; font-weight: bold; }
+.info-panel h3 { margin: 8px 0; font-size: 18px; }
+.info-panel p { margin: 0; color: #606b73; line-height: 1.6; font-size: 14px; }
+
+/* SIDEBAR */
+.sidebar { min-width: 0; }
+.side-title {
+  color: #8b9298; font-size: 13px; font-weight: 500;
+  margin: 9px 0 10px; letter-spacing: .3px;
+}
+.side-card {
+  display: flex; min-height: 96px; margin-bottom: 15px;
+  color: #20252b; text-decoration: none; border-radius: 5px;
+  overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,.10);
+  transition: transform .2s;
+}
+.side-card:hover { transform: translateY(-2px); }
+.thumb {
+  width: 43%; min-height: 96px; display: grid; place-items: center;
+  background: #dedede; font-size: 38px;
+}
+.lungs-thumb { background: linear-gradient(135deg,#e6e6e6,#c8d7d9); }
+.body-thumb { background: linear-gradient(135deg,#dce4e8,#aabac4); }
+.anatomy-thumb { background: linear-gradient(135deg,#e9d9d4,#d7b6b0); }
+.digestion-thumb { background: linear-gradient(135deg,#e7e0ce,#c4d6b8); }
+.kidney-thumb { background: linear-gradient(135deg,#e4d9e9,#c7c0dc); }
+.side-card-text {
+  flex: 1; min-width: 0; padding: 11px 10px;
+  display: flex; flex-direction: column; gap: 4px;
+}
+.side-card-text strong { font-size: 14px; font-weight: 500; }
+.side-card-text small { color: #82909a; font-size: 12px; }
+.meta { margin-top: auto; color: #89949d; font-size: 11px; }
+.suggested-title { margin-top: 26px; }
+.sidebar-note {
+  margin-top: 24px; padding: 16px; border-radius: 6px; background: #f5f8fa;
+  color: #38434a; font-size: 13px;
+}
+.sidebar-note p { margin: 7px 0 0; color: #68737b; line-height: 1.5; }
+footer { border-top: 1px solid #eee; padding: 18px 4%; color: #899198; font-size: 12px; }
+
+/* RESPONSIVE: TAMPILAN HP DAN TABLET */
+@media (max-width: 900px) {
+  .topbar { gap: 15px; flex-wrap: wrap; }
+  .search { order: 5; flex-basis: 100%; max-width: none; }
+  .page-layout { grid-template-columns: 1fr; padding-top: 20px; }
+  .sidebar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .side-title { grid-column: 1 / -1; }
+  .suggested-title { margin-top: 10px; }
+  .side-card { margin: 0; }
+  .sidebar-note { grid-column: 1 / -1; }
+}
+@media (max-width: 560px) {
+  .topbar { padding: 12px 4%; gap: 13px; }
+  .main-nav { order: 4; width: 100%; }
+  .login { margin-left: auto; }
+  .signup { padding: 9px 11px; }
+  .page-layout { padding: 15px 4% 35px; }
+  .viewer { height: 360px; }
+  .model-heading h1 { font-size: 20px; }
+  .organ-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sidebar { grid-template-columns: 1fr; }
+  .side-title { margin-top: 15px; }
+  .thumb { width: 38%; }
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organ Pernapasan pada Manusia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- BAGIAN HEADER / NAVIGASI -->
+  <header class="topbar">
+    <a class="brand" href="#">
+      <span class="brand-icon">✚</span>
+      <span>Bio<span class="brand-light">Learn</span></span>
+    </a>
+
+    <nav class="main-nav">
+      <a href="#model">JELAJAHI</a>
+      <a href="#materi">MATERI</a>
+    </nav>
+
+    <form class="search" id="searchForm">
+      <span>⌕</span>
+      <input id="searchInput" type="search" placeholder="Cari materi pembelajaran">
+      <button type="submit">Cari</button>
+    </form>
+
+    <a class="login" href="#masuk">MASUK</a>
+    <a class="signup" href="#daftar">DAFTAR</a>
+  </header>
+
+  <main class="page-layout">
+    <!-- KOLOM KIRI: MODEL 3D DAN MATERI -->
+    <section class="main-column" id="model">
+      <div class="viewer">
+        <!--
+          Model 3D diambil dari Sketchfab.
+          Jika ingin mengganti model, ganti kode UID pada alamat iframe di bawah.
+          Model memerlukan koneksi internet.
+        -->
+        <iframe
+          title="Model 3D organ pernapasan manusia"
+          src="https://sketchfab.com/models/30b30c0bc02f4737a585b43aef75e90e/embed?autostart=0&amp;ui_infos=0&amp;ui_watermark=0&amp;annotations_visible=1"
+          allow="autoplay; fullscreen; xr-spatial-tracking"
+          allowfullscreen>
+        </iframe>
+        <div class="viewer-caption">
+          <span>MODEL 3D INTERAKTIF</span>
+          <span>Putar • Perbesar • Perkecil</span>
+        </div>
+      </div>
+
+      <div class="model-heading">
+        <div>
+          <h1>Organ pernapasan pada manusia</h1>
+          <p>Pelajari bagian-bagian sistem pernapasan melalui model 3D.</p>
+        </div>
+        <span class="model-tag">3D Model</span>
+      </div>
+
+      <section class="lesson" id="materi">
+        <h2>Mengenal organ pernapasan</h2>
+        <p>
+          Sistem pernapasan adalah sistem organ yang membantu manusia mengambil
+          oksigen dari udara dan mengeluarkan karbon dioksida. Udara masuk melalui
+          hidung, kemudian melewati saluran pernapasan hingga mencapai paru-paru.
+        </p>
+
+        <div class="organ-grid">
+          <button class="organ-card active" data-organ="Hidung" data-info="Hidung menjadi tempat masuknya udara. Rambut hidung dan lendir membantu menyaring debu serta kotoran.">
+            <span class="organ-number">01</span><strong>Hidung</strong>
+            <small>Tempat masuk udara</small>
+          </button>
+          <button class="organ-card" data-organ="Faring" data-info="Faring adalah saluran di belakang rongga hidung dan mulut yang menjadi jalur lewat udara menuju laring.">
+            <span class="organ-number">02</span><strong>Faring</strong>
+            <small>Persimpangan saluran</small>
+          </button>
+          <button class="organ-card" data-organ="Laring" data-info="Laring menghubungkan faring dengan trakea. Di dalamnya terdapat pita suara.">
+            <span class="organ-number">03</span><strong>Laring</strong>
+            <small>Tempat pita suara</small>
+          </button>
+          <button class="organ-card" data-organ="Trakea" data-info="Trakea atau batang tenggorokan menyalurkan udara menuju bronkus. Dindingnya diperkuat cincin tulang rawan.">
+            <span class="organ-number">04</span><strong>Trakea</strong>
+            <small>Batang tenggorokan</small>
+          </button>
+          <button class="organ-card" data-organ="Bronkus" data-info="Bronkus merupakan dua cabang trakea yang menyalurkan udara ke paru-paru kanan dan kiri.">
+            <span class="organ-number">05</span><strong>Bronkus</strong>
+            <small>Cabang trakea</small>
+          </button>
+          <button class="organ-card" data-organ="Bronkiolus" data-info="Bronkiolus adalah cabang-cabang kecil bronkus yang menyalurkan udara ke alveolus.">
+            <span class="organ-number">06</span><strong>Bronkiolus</strong>
+            <small>Cabang kecil bronkus</small>
+          </button>
+          <button class="organ-card" data-organ="Alveolus" data-info="Alveolus adalah kantung udara kecil di paru-paru. Di bagian ini terjadi pertukaran oksigen dan karbon dioksida dengan darah.">
+            <span class="organ-number">07</span><strong>Alveolus</strong>
+            <small>Tempat pertukaran gas</small>
+          </button>
+          <button class="organ-card" data-organ="Paru-paru" data-info="Paru-paru merupakan organ utama pernapasan yang berisi bronkiolus dan alveolus.">
+            <span class="organ-number">08</span><strong>Paru-paru</strong>
+            <small>Organ utama pernapasan</small>
+          </button>
+          <button class="organ-card" data-organ="Diafragma" data-info="Diafragma adalah otot berbentuk kubah di bawah paru-paru yang membantu proses menarik dan mengembuskan napas.">
+            <span class="organ-number">09</span><strong>Diafragma</strong>
+            <small>Otot bantu pernapasan</small>
+          </button>
+        </div>
+
+        <div class="info-panel" aria-live="polite">
+          <span class="info-label">INFORMASI ORGAN</span>
+          <h3 id="organTitle">Hidung</h3>
+          <p id="organInfo">Hidung menjadi tempat masuknya udara. Rambut hidung dan lendir membantu menyaring debu serta kotoran.</p>
+        </div>
+      </section>
+    </section>
+
+    <!-- KOLOM KANAN: DAFTAR MATERI -->
+    <aside class="sidebar">
+      <h2 class="side-title">MATERI DALAM KOLEKSI</h2>
+      <a class="side-card" href="#materi">
+        <div class="thumb lungs-thumb"><span>🫁</span></div>
+        <div class="side-card-text"><strong>Sistem Pernapasan</strong><small>BioLearn</small><span class="meta">◈ 1 &nbsp; ♧ 0</span></div>
+      </a>
+      <a class="side-card" href="#materi">
+        <div class="thumb body-thumb"><span>🧍</span></div>
+        <div class="side-card-text"><strong>Struktur Tubuh Manusia</strong><small>BioLearn</small><span class="meta">◈ 2 &nbsp; ♧ 0</span></div>
+      </a>
+      <a class="side-card" href="#materi">
+        <div class="thumb anatomy-thumb"><span>🫀</span></div>
+        <div class="side-card-text"><strong>Organ Dalam Manusia</strong><small>BioLearn</small><span class="meta">◈ 1 &nbsp; ♧ 0</span></div>
+      </a>
+
+      <h2 class="side-title suggested-title">MATERI LAINNYA</h2>
+      <a class="side-card" href="#materi">
+        <div class="thumb digestion-thumb"><span>🥗</span></div>
+        <div class="side-card-text"><strong>Sistem Pencernaan</strong><small>BioLearn</small><span class="meta">◉ 6 &nbsp; ♧ 0 &nbsp; ☆ 0</span></div>
+      </a>
+      <a class="side-card" href="#materi">
+        <div class="thumb kidney-thumb"><span>🫘</span></div>
+        <div class="side-card-text"><strong>Sistem Ekskresi</strong><small>BioLearn</small><span class="meta">◉ 4 &nbsp; ♧ 1 &nbsp; ☆ 2</span></div>
+      </a>
+      <div class="sidebar-note">
+        <strong>Tips belajar</strong>
+        <p>Putar model 3D, lalu pilih nama organ untuk membaca penjelasannya.</p>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <p>© 2026 BioLearn — Media pembelajaran sistem pernapasan manusia.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
